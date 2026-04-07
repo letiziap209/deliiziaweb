@@ -1,0 +1,227 @@
+/* --- Estilos Generales --- */
+
+:root {
+    --color-primario: #A0522D; /* El terracota de tu banner */
+    --color-fondo: #FFF8DC;    /* Crema suave para el fondo */
+    --color-blanco: #FFFFFF;
+    --color-texto: #5D4037;    /* Marrón chocolate para que sea fácil de leer */
+    --fuente-principal: 'Poppins', sans-serif;
+    --fuente-titulos: 'Playfair Display', serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.seccion {
+    padding: 60px 0;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* --- Navegación (Menú de arriba) --- */
+
+header {
+    background-color: var(--color-blanco);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+nav a {
+    font-weight: 600;
+    color: var(--color-texto);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover, nav a.activo {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+/* --- Banner Principal --- */
+
+.banner-principal {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.img-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5); /* Esto hace que el texto blanco se lea mejor */
+    z-index: -1;
+}
+
+.banner-texto h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* --- Cuadrícula de Productos (Menú) --- */
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.producto-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+}
+
+.img-producto {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.producto-card h3 {
+    margin: 15px 0 5px;
+}
+
+.producto-card p {
+    padding: 0 15px;
+    font-size: 0.9rem;
+}
+
+.precio {
+    display: block;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    color: var(--color-primario);
+}
+
+/* --- Diseño de 2 Columnas (Presentación y Contacto) --- */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    align-items: center;
+}
+
+.img-destacada {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px var(--color-primario);
+}
+
+/* --- Formulario de Contacto --- */
+
+.contacto-formulario {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.boton-formulario {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- Footer --- */
+
+footer {
+    background-color: var(--color-texto);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
